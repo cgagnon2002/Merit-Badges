@@ -11,7 +11,7 @@ while (guess != answer){
 	
 	if (guess == "q") break;
 	else if (validator(guess) == true){
-		turns++
+		turns++;
 		
 		if (guess < answer) alert("Too low!");
 		else if (guess > answer) alert("Too high!");
