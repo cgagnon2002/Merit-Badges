@@ -1,0 +1,68 @@
+/* Mad Libs JS by Chloe Galyean */
+
+
+
+
+
+
+var play = false;
+var currentLib = null;
+
+var person_1 = "PERSON IN ROOM";
+var person_2 = "PERSON IN ROOM";
+var noun_1 = "NOUN";
+var noun_2 = "NOUN";
+var noun_3 = "NOUN";
+var noun_4 = "NOUN";
+var noun_5 = "NOUN";
+var noun_6 = "NOUN";
+var noun_7 = "NOUN";
+var noun_8 = "NOUN";
+var noun_pl1 = "PLURAL NOUN";
+var noun_pl2 = "PLURAL NOUN";
+var adj_1 = "ADJECTIVE";
+var adj_2 = "ADJECTIVE";
+var adj_3 = "ADJECTIVE";
+var verb_p1 = "VERB (PAST TENSE)";
+var loc_1 = "LOCATION";
+var loc_2 = "LOCATION";
+var num_1 = "NUMBER";
+var num_2 = "NUMBER";
+var excl_1 = "EXCLAMATION";
+
+var extra = "";
+
+var lib_1 = ["Hi! This is ",person_1,", speaking to you from the broadcasting ",noun_1," at the ",adj_1," forum. In case you ",verb_p1," in late, the score between the ",loc_1," ",noun_pl1," and the ",loc_2," ",noun_pl2," is a squeaker, 141 to ",num_1,". This has been the most ",adj_2," game these ",adj_3," eyes have seen in years. First, one team scores a ",noun_2,", then ",excl_1,"! --the other team comes right back! Okay. Time-out is over. ",extra," brings the ball to mid-",noun_3,", ",person_2," dribbles down the ",noun_4,", fakes the defender out of his ",noun_5,", and shoots a ",num_2," handed shot. It goes right through the ",noun_6,". He beat the ",noun_7,"! The game is over just as the ",noun_8," goes off!"];
+
+
+
+
+
+
+
+play = confirm("Play Mad Libs?");
+
+while (play == true){
+  lib_1 = ["Hi! This is ",person_1,", speaking to you from the broadcasting ",noun_1," at the ",adj_1," forum. In case you ",verb_p1," in late, the score between the ",loc_1," ",noun_pl1," and the ",loc_2," ",noun_pl2," is a squeaker, 141 to ",num_1,". This has been the most ",adj_2," game these ",adj_3," eyes have seen in years. First, one team scores a ",noun_2,", then ",excl_1,"! --the other team comes right back! Okay. Time-out is over. ",extra," brings the ball to mid-",noun_3,", ",person_2," dribbles down the ",noun_4,", fakes the defender out of his ",noun_5,", and shoots a ",num_2," handed shot. It goes right through the ",noun_6,". He beat the ",noun_7,"! The game is over just as the ",noun_8," goes off!"];
+  
+  main();
+  play = confirm("Play again?");
+}
+
+
+
+
+function main() {
+  for (var i = 1; i < lib_1.length; i += 2) {
+    if (i != 27) {
+      lib_1[i] = prompt("Input a(n) "+lib_1[i]);
+    }
+  }
+  lib_1[27] = lib_1[9];
+  result();
+}
+
+function result() {
+  let final = lib_1.join("");
+  alert(final);
+}
